@@ -74,12 +74,12 @@
 
 	.logo h1 a{
 		text-decoration: none;
-		font-size: 30px;
+		font-size: 60px;
 	}
 	
 	.navbar{
 		position: fixed;
-		top: 66px;
+		top: 112px;
 		width: 100%;
 		height: 100%;
 		background: rgba(0,0,0,0.8);
@@ -90,7 +90,7 @@
 
 	#navbar.active{
 		position: fixed;
-		top: 66px;
+		top: 112px;
 		left: 0px;
 		height: 100%
 	}
@@ -108,7 +108,7 @@
 	.navbar ul li a{
 		display: block;
 		color: white;
-		font-size: 20px;
+		font-size: 40px;
 		text-align: center;
 	}
 
@@ -126,17 +126,17 @@
 
 	.burger{
 		position: fixed;
-		top: 21px;
+		top: 30px;
 		right: 50px;
 		cursor: pointer;
 		z-index: 100;
 	}
 
 	.burger div{
-		width: 25px;
-		height: 3px;
+		width: 40px;
+		height: 4px;
 		background: black;
-		margin: 4px;
+		margin: 10px;
 	}
 
 	
@@ -168,7 +168,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		font-size: 40px;
+		font-size: 50px;
 		color: #FFFFFF;
 	}
 
@@ -177,7 +177,7 @@
 		top: 55%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		font-size: 20px;
+		font-size: 30px;
 		color: #FFFFFF;
 	}
 
