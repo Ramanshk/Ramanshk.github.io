@@ -55,7 +55,7 @@
 
 
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1439px){
 	
 	.background{
 		background: #EE964B;
@@ -173,7 +173,7 @@
 
 	.intro p{
 		position: absolute;
-		top: 53%;
+		top: 55%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		font-size: 20px;
