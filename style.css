@@ -88,7 +88,12 @@
 		z-index: 99;
 	}
 
-
+	#navbar.active{
+		position: fixed;
+		top: 66px;
+		left: 0px;
+		height: 100%
+	}
 
 	.navbar ul{
 		display: block;
@@ -133,11 +138,7 @@
 		margin: 4px;
 	}
 
-	#navbar.active{
-		left: 0px;
-		position: fixed;
-		height: 100%
-	}
+	
 
 	.image{
 		margin: 0 70px;
