@@ -1,0 +1,185 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.logo{
+	display: block;
+	text-align: center;
+	padding: 30px 0;
+}
+
+
+.logo h1{
+	font-size: 80px;
+}
+
+.logo h1 a{
+	text-decoration: none;
+	color: black;
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	color: black;	
+}
+	
+.navbar ul{
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.navbar ul li{
+	display: inline-block;
+	padding: 1em;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20px;
+	color: white;
+	padding: 20px 24px;
+}
+
+.image{
+		display: inline-flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.image div img{
+		height: 500px;
+		width: 500px;
+	}
+
+
+
+
+
+@media screen and (max-width: 800px){
+	
+	.background{
+		background: #EE964B;
+		position: fixed;
+		top: 0px;
+		right: 0;
+		left: 0;
+		z-index: 99;
+	}
+
+	.logo{
+		margin-left: 50px;
+		display: inline-block;
+		padding: 10px 0;
+	}
+
+	.logo h1 a{
+		text-decoration: none;
+		font-size: 30px;
+	}
+	
+	.navbar{
+		position: absolute;
+		top: 66px;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.8);
+		left: -100%;
+		transition: .4s ease-in-out;
+		z-index: 99;
+	}
+
+
+
+	.navbar ul{
+		display: block;
+		margin-top: 50px;
+	}
+
+	.navbar ul li{
+		display: block;
+	}
+
+	.navbar ul li a{
+		display: block;
+		color: white;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.navbar ul li a:hover{
+		display: block;
+		color: #EE964B;
+	}
+
+	.line1, .line2, .line3{
+		width: 25px;
+		height: 3px;
+		background: black;
+		margin-top: 4px;
+	}
+
+	.burger{
+		position: fixed;
+		top: 21px;
+		right: 50px;
+		cursor: pointer;
+		z-index: 100;
+	}
+
+	.burger div{
+		width: 25px;
+		height: 3px;
+		background: black;
+		margin: 4px;
+	}
+
+	#navbar.active{
+		left: 0px;
+		position: fixed;
+	}
+
+	.image{
+		margin: 0 70px;
+		display: flex;
+		justify-content: space-around;
+		flex-flow: wrap;
+	}
+
+	.image1 img ,.image2 img{
+		height: 280px;
+		width: 280px;
+		padding: 10px; 
+	}
+
+	.image1. .image2{
+		display: inline-flex;
+	}
+
+	.intro img{
+		width: 100%;		
+		height: auto; 
+	}
+
+	.intro h1{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 40px;
+		color: #FFFFFF;
+	}
+
+	.intro p{
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 20px;
+		color: #FFFFFF;
+	}
+
+	#about, #contact, #exercises{
+		height: 500px;
+
+	}
+}
