@@ -78,7 +78,7 @@
 	}
 	
 	.navbar{
-		position: absolute;
+		position: fixed;
 		top: 66px;
 		width: 100%;
 		height: 100%;
