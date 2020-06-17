@@ -136,6 +136,7 @@
 	#navbar.active{
 		left: 0px;
 		position: fixed;
+		height: 100%
 	}
 
 	.image{
