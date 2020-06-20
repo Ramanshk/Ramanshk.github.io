@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 20px;
+		}
+		#output{
+			background: #f5f5f5;
+			padding: 10px;
+			margin: 10px 0;
+		}
+		.win {color:green;}
+		.lost{color:red;}
+		.draw{color:orange;}
+
+		#storage{
+			background: #f5f5f5;
+			padding: 10px;
+			margin: 10px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Welcome to Rock Paper Scissors Game. GOOD LUCK</h1>
+	<p>Rock: 1 | Paper: 2 | Scissors: 3</p>
+
+	<input type="text" id="userin" placeholder="Enter your choice: "/>
+	<button id="btn" onclick="play()">PLAY</button>
+
+	<div id="output"></div>
+	<div id="result"></div>
+	<div id="storage">
+		<div id="user-label" class="badge">user</div>
+		<div id="comp-label" class="badge">computer</div>
+		<span id="user-score">0</span>:<span id="computer-score">0</span>
+	</div>
+
+	<script type="text/javascript">
+
+	function whatToSay(input){
+		if(input == 1){
+			return("threw Rock");
+		}
+		else if(input == 2){
+			return("threw Paper");
+		}
+		else{
+			return("threw Scissors");
+		}
+	}
+	var resultarea = document.getElementById('result');
+	var storageArea = document.getElementById('storage');
+	var userscore  = 0;
+	var computerscore = 0;
+	const userscore_span = document.getElementById("user-score");
+	const compscore_span = document.getElementById("computer-score");
+
+	function decide(num1, num2){
+			if(num1 == num2){
+				resultarea.className= "draw";
+				resultarea.innerHTML = "Bummer, That was a draw !!";
+				console.log('draw');
+				userscore_span.innerHTML = userscore;
+				compscore_span.innerHTML = computerscore;
+			}
+			else if(num1 ==1 && num2==3){
+				resultarea.className= "win";
+				resultarea.innerHTML= "YOU WONNNN!!";
+				userscore++; 
+				console.log('win');
+				userscore_span.innerHTML = userscore;
+				compscore_span.innerHTML = computerscore;
+			}
+			else if(num1 ==2 && num2==1){
+				resultarea.className= "win";
+				resultarea.innerHTML= "YOU WONNNN!!";
+				userscore++; 
+				console.log('win');
+				userscore_span.innerHTML = userscore;
+				compscore_span.innerHTML = computerscore;
+			}
+			else if(num1 ==3 && num2==2){
+				resultarea.className= "win";
+				resultarea.innerHTML= "YOU WONNNN!!";
+				userscore++;
+				console.log('win');
+				userscore_span.innerHTML = userscore;
+				compscore_span.innerHTML = computerscore;
+			}
+			else{
+				resultarea.className= "lost";
+				resultarea.innerHTML= "YOU LOSTTTT!!";
+				computerscore++;
+				console.log('lost');
+				userscore_span.innerHTML = userscore;
+				compscore_span.innerHTML = computerscore;			
+			}
+
+		}
+
+	function play(){
+		var userinput = document.getElementById('userin').value;
+
+		if(userinput == ''){ 
+			alert('Please enter a choice: 1, 2 or 3');
+		}
+		if(userinput != 1 & userinput != 2 & userinput != 3){
+			alert('Not a valid entry');
+		}
+		else{
+			var outputarea = document.getElementById('output');
+			outputarea.innerHTML = "You " + whatToSay(userinput);
+		}
+			var compin = Math.round(Math.random() * 2 + 1);
+			outputarea.innerHTML += " Computer " + whatToSay(compin);
+		
+		decide(userinput, compin);	
+
+		//userscore.storage.innerHTML = userscore;
+		//computerscore.storage.innerHTML = computerscore; 
+
+
+		/*
+		if(userinput==compin){
+			resultarea.className= "draw";
+			resultarea.innerHTML= "DRAWWWWWWWW!!";
+		}
+		else if(userinput == 1 && compin == 3){
+			resultarea.className= "win";
+			resultarea.innerHTML= "YOU WONNNN!!";
+		}
+		else{
+			resultarea.className= "lost";
+			resultarea.innerHTML= "YOU LOSTTTT!!";
+		}
+		*/
+		
+	}
+	</script>
+</body>
+</html>
